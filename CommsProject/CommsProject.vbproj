@@ -90,9 +90,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Dashboard.vb" />
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
