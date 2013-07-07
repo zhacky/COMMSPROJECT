@@ -15,24 +15,13 @@ Public Class UsersDialog
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
         If boxesEmpty Then
             If validateFields() Then
-
-            End If
-            If (Len(txtUsername.Text) > 2 And Len(txtPassword.Text) > 2) Then
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
-                If (Len(cboRole.Text) > 2) Then
-                    Dim role As String = cboRole.Text
-                    Console.WriteLine("Passing values (" & username & "," & password & "," & role & ") to the DataClass: AddUser")
-                    DataClass.AddUser(username, password, role)
-                    txtUsername.Text = ""
-                    txtPassword.Text = ""
-                    cboRole.SelectedIndex = -1
-                    loadUsers()
-                Else
-                    MessageBox.Show("Please select access level")
-                End If
-            Else
-                MessageBox.Show("The username or password requires at least three(3) characters")
+                Dim role As String = cboRole.Text
+                Console.WriteLine("Passing values (" & username & "," & password & "," & role & ") to the DataClass: AddUser")
+                DataClass.AddUser(username, password, role)
+                loadUsers()
+                resetFields()
             End If
         Else
             resetFields()

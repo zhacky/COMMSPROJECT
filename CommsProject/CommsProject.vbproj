@@ -90,7 +90,9 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.vb" />
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
@@ -111,6 +113,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="splash\LoginDialog.Designer.vb">
+      <DependentUpon>LoginDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash\LoginDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash\SplashWindow.Designer.vb">
+      <DependentUpon>SplashWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash\SplashWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UsersDialog.Designer.vb">
       <DependentUpon>UsersDialog.vb</DependentUpon>
     </Compile>
@@ -127,6 +141,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash\LoginDialog.resx">
+      <DependentUpon>LoginDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash\SplashWindow.resx">
+      <DependentUpon>SplashWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersDialog.resx">
       <DependentUpon>UsersDialog.vb</DependentUpon>
@@ -166,6 +186,11 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sys\comms.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

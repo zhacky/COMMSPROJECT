@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("CommsProject")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Microsoft")> 
+<Assembly: AssemblyTitle("Comms Project")> 
+<Assembly: AssemblyDescription("Comprehensive Monitoring and Management System")> 
+<Assembly: AssemblyCompany("ZHACKY.COM")> 
 <Assembly: AssemblyProduct("CommsProject")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2013")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("Copyright © ZHACKY.COM 2013")> 
+<Assembly: AssemblyTrademark("ZHACKY.COM TECH SOLUTIONS, LLC")> 
 
 <Assembly: ComVisible(False)>
 

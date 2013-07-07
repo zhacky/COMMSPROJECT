@@ -94,6 +94,7 @@ Partial Class UsersDialog
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(172, 20)
         Me.txtPassword.TabIndex = 3
+        Me.txtPassword.UseSystemPasswordChar = True
         '
         'cboRole
         '
