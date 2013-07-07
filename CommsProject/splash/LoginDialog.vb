@@ -9,8 +9,8 @@
     ' such as the username, display name, etc.
 
     Dim LoginCounter As Integer = 0
-    Private Username As String = "Zhack"
-    Private Password As String = "feedback"
+    Private Username As String = "Admin"
+    Private Password As String = "1234"
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         testLogin()

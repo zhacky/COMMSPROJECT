@@ -45,7 +45,7 @@ Public Class DataClass
 
             While dr.Read
                 Console.WriteLine(dr(1).ToString)
-                userList.Add(dr(1).ToString)
+                userList.Add(dr(1).ToString & " - " & dr(3).ToString)
 
             End While
 

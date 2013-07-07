@@ -24,12 +24,12 @@ Partial Class Dashboard
     Private Sub InitializeComponent()
         Me.btnUsers = New System.Windows.Forms.Button()
         Me.gbxMenu = New System.Windows.Forms.GroupBox()
-        Me.btnPurchase = New System.Windows.Forms.Button()
-        Me.btnEmployee = New System.Windows.Forms.Button()
-        Me.btnProducts = New System.Windows.Forms.Button()
-        Me.btnSupplier = New System.Windows.Forms.Button()
-        Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnCustomer = New System.Windows.Forms.Button()
+        Me.btnSupplier = New System.Windows.Forms.Button()
+        Me.btnProducts = New System.Windows.Forms.Button()
+        Me.btnEmployee = New System.Windows.Forms.Button()
+        Me.btnPurchase = New System.Windows.Forms.Button()
         Me.gbxMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,41 +57,14 @@ Partial Class Dashboard
         Me.gbxMenu.TabStop = False
         Me.gbxMenu.Text = "Menu"
         '
-        'btnPurchase
+        'btnLogout
         '
-        Me.btnPurchase.Location = New System.Drawing.Point(6, 71)
-        Me.btnPurchase.Name = "btnPurchase"
-        Me.btnPurchase.Size = New System.Drawing.Size(75, 23)
-        Me.btnPurchase.TabIndex = 0
-        Me.btnPurchase.Text = "PURCHASE"
-        Me.btnPurchase.UseVisualStyleBackColor = True
-        '
-        'btnEmployee
-        '
-        Me.btnEmployee.Location = New System.Drawing.Point(87, 71)
-        Me.btnEmployee.Name = "btnEmployee"
-        Me.btnEmployee.Size = New System.Drawing.Size(75, 23)
-        Me.btnEmployee.TabIndex = 1
-        Me.btnEmployee.Text = "EMPLOYEE"
-        Me.btnEmployee.UseVisualStyleBackColor = True
-        '
-        'btnProducts
-        '
-        Me.btnProducts.Location = New System.Drawing.Point(168, 71)
-        Me.btnProducts.Name = "btnProducts"
-        Me.btnProducts.Size = New System.Drawing.Size(75, 23)
-        Me.btnProducts.TabIndex = 2
-        Me.btnProducts.Text = "PRODUCTS"
-        Me.btnProducts.UseVisualStyleBackColor = True
-        '
-        'btnSupplier
-        '
-        Me.btnSupplier.Location = New System.Drawing.Point(249, 71)
-        Me.btnSupplier.Name = "btnSupplier"
-        Me.btnSupplier.Size = New System.Drawing.Size(75, 23)
-        Me.btnSupplier.TabIndex = 3
-        Me.btnSupplier.Text = "SUPPLIER"
-        Me.btnSupplier.UseVisualStyleBackColor = True
+        Me.btnLogout.Location = New System.Drawing.Point(426, 71)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogout.TabIndex = 5
+        Me.btnLogout.Text = "LOGOUT"
+        Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnCustomer
         '
@@ -102,14 +75,41 @@ Partial Class Dashboard
         Me.btnCustomer.Text = "CUSTOMER"
         Me.btnCustomer.UseVisualStyleBackColor = True
         '
-        'btnLogout
+        'btnSupplier
         '
-        Me.btnLogout.Location = New System.Drawing.Point(426, 71)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogout.TabIndex = 5
-        Me.btnLogout.Text = "LOGOUT"
-        Me.btnLogout.UseVisualStyleBackColor = True
+        Me.btnSupplier.Location = New System.Drawing.Point(249, 71)
+        Me.btnSupplier.Name = "btnSupplier"
+        Me.btnSupplier.Size = New System.Drawing.Size(75, 23)
+        Me.btnSupplier.TabIndex = 3
+        Me.btnSupplier.Text = "SUPPLIER"
+        Me.btnSupplier.UseVisualStyleBackColor = True
+        '
+        'btnProducts
+        '
+        Me.btnProducts.Location = New System.Drawing.Point(168, 71)
+        Me.btnProducts.Name = "btnProducts"
+        Me.btnProducts.Size = New System.Drawing.Size(75, 23)
+        Me.btnProducts.TabIndex = 2
+        Me.btnProducts.Text = "PRODUCTS"
+        Me.btnProducts.UseVisualStyleBackColor = True
+        '
+        'btnEmployee
+        '
+        Me.btnEmployee.Location = New System.Drawing.Point(87, 71)
+        Me.btnEmployee.Name = "btnEmployee"
+        Me.btnEmployee.Size = New System.Drawing.Size(75, 23)
+        Me.btnEmployee.TabIndex = 1
+        Me.btnEmployee.Text = "EMPLOYEE"
+        Me.btnEmployee.UseVisualStyleBackColor = True
+        '
+        'btnPurchase
+        '
+        Me.btnPurchase.Location = New System.Drawing.Point(6, 71)
+        Me.btnPurchase.Name = "btnPurchase"
+        Me.btnPurchase.Size = New System.Drawing.Size(75, 23)
+        Me.btnPurchase.TabIndex = 0
+        Me.btnPurchase.Text = "PURCHASE"
+        Me.btnPurchase.UseVisualStyleBackColor = True
         '
         'Dashboard
         '
