@@ -98,6 +98,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dbcontroller\DataClass.vb" />
+    <Compile Include="dbcontroller\DbErrorDialog.Designer.vb">
+      <DependentUpon>DbErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dbcontroller\DbErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,6 +141,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbcontroller\DbErrorDialog.resx">
+      <DependentUpon>DbErrorDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

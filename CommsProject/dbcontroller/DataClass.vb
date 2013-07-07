@@ -52,6 +52,8 @@ Public Class DataClass
 
         Catch ex As OleDbException
             Console.WriteLine("DataClass: error getting users array" & vbCrLf & ex.Message)
+            MessageBox.Show("DataClass: error getting users array" & vbCrLf & ex.Message)
+
         End Try
 
 
@@ -138,6 +140,32 @@ Public Class DataClass
         conn.Close()
         userID = usersID(UserIndex)
         Return userID
+    End Function
+
+    Shared Function SearchUserByName(ByVal p1 As String) As String()
+        Dim username As String = p1
+        Dim userData As New List(Of String)
+        Dim dr As OleDbDataReader
+        Dim strQuery As New OleDbCommand("SELECT * FROM UsersTable WHERE UserName=?", conn)
+        strQuery.Parameters.Add("@UserName", OleDbType.VarChar, 255).Value = username
+        Try
+            conn.Open()
+            Try
+                dr = strQuery.ExecuteReader()
+                While dr.Read
+                    Console.WriteLine(dr(1).ToString)
+                    userData.AddRange({dr(1), dr(2), dr(3)})
+                End While
+            Catch ex As Exception
+
+            End Try
+            conn.Close()
+        Catch ex As Exception
+
+            Console.WriteLine("error opening db connection..." & vbCrLf & ex.Message)
+
+        End Try
+        Return userData.ToArray
     End Function
 
  
