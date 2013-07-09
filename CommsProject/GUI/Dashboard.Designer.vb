@@ -30,16 +30,17 @@ Partial Class Dashboard
         Me.btnProducts = New System.Windows.Forms.Button()
         Me.btnEmployee = New System.Windows.Forms.Button()
         Me.btnPurchase = New System.Windows.Forms.Button()
+        Me.btnSales = New System.Windows.Forms.Button()
         Me.gbxMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnUsers
         '
-        Me.btnUsers.Location = New System.Drawing.Point(12, 12)
+        Me.btnUsers.Location = New System.Drawing.Point(199, 95)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(75, 23)
         Me.btnUsers.TabIndex = 0
-        Me.btnUsers.Text = "Users"
+        Me.btnUsers.Text = "USERS"
         Me.btnUsers.UseVisualStyleBackColor = True
         '
         'gbxMenu
@@ -111,11 +112,21 @@ Partial Class Dashboard
         Me.btnPurchase.Text = "PURCHASE"
         Me.btnPurchase.UseVisualStyleBackColor = True
         '
+        'btnSales
+        '
+        Me.btnSales.Location = New System.Drawing.Point(118, 95)
+        Me.btnSales.Name = "btnSales"
+        Me.btnSales.Size = New System.Drawing.Size(75, 23)
+        Me.btnSales.TabIndex = 2
+        Me.btnSales.Text = "SALES"
+        Me.btnSales.UseVisualStyleBackColor = True
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 399)
+        Me.Controls.Add(Me.btnSales)
         Me.Controls.Add(Me.gbxMenu)
         Me.Controls.Add(Me.btnUsers)
         Me.Name = "Dashboard"
@@ -132,5 +143,6 @@ Partial Class Dashboard
     Friend WithEvents btnProducts As System.Windows.Forms.Button
     Friend WithEvents btnEmployee As System.Windows.Forms.Button
     Friend WithEvents btnPurchase As System.Windows.Forms.Button
+    Friend WithEvents btnSales As System.Windows.Forms.Button
 
 End Class

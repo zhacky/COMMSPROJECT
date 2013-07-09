@@ -90,10 +90,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.vb">
+    <Compile Include="GUI\Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.vb">
+    <Compile Include="GUI\Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +102,30 @@
       <DependentUpon>DbErrorDialog.vb</DependentUpon>
     </Compile>
     <Compile Include="dbcontroller\DbErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCustomers.Designer.vb">
+      <DependentUpon>frmCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEmployees.Designer.vb">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPurchase.Designer.vb">
+      <DependentUpon>frmPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSuppliers.Designer.vb">
+      <DependentUpon>frmSuppliers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSuppliers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -119,37 +143,55 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="products\frmProducts.Designer.vb">
+    <Compile Include="GUI\frmProducts.Designer.vb">
       <DependentUpon>frmProducts.vb</DependentUpon>
     </Compile>
-    <Compile Include="products\frmProducts.vb">
+    <Compile Include="GUI\frmProducts.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splash\LoginDialog.Designer.vb">
+    <Compile Include="POS\frmSales.Designer.vb">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="POS\frmSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashAndLogin\LoginDialog.Designer.vb">
       <DependentUpon>LoginDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="splash\LoginDialog.vb">
+    <Compile Include="SplashAndLogin\LoginDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splash\SplashWindow.Designer.vb">
+    <Compile Include="SplashAndLogin\SplashWindow.Designer.vb">
       <DependentUpon>SplashWindow.vb</DependentUpon>
     </Compile>
-    <Compile Include="splash\SplashWindow.vb">
+    <Compile Include="SplashAndLogin\SplashWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersDialog.Designer.vb">
-      <DependentUpon>UsersDialog.vb</DependentUpon>
+    <Compile Include="GUI\frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
     </Compile>
-    <Compile Include="UsersDialog.vb">
+    <Compile Include="GUI\frmUsers.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dbcontroller\DbErrorDialog.resx">
       <DependentUpon>DbErrorDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCustomers.resx">
+      <DependentUpon>frmCustomers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEmployees.resx">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPurchase.resx">
+      <DependentUpon>frmPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSuppliers.resx">
+      <DependentUpon>frmSuppliers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -157,21 +199,25 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="products\frmProducts.resx">
+    <EmbeddedResource Include="GUI\frmProducts.resx">
       <DependentUpon>frmProducts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="splash\LoginDialog.resx">
+    <EmbeddedResource Include="POS\frmSales.resx">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashAndLogin\LoginDialog.resx">
       <DependentUpon>LoginDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="splash\SplashWindow.resx">
+    <EmbeddedResource Include="SplashAndLogin\SplashWindow.resx">
       <DependentUpon>SplashWindow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersDialog.resx">
-      <DependentUpon>UsersDialog.vb</DependentUpon>
+    <EmbeddedResource Include="GUI\frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="sys\app.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

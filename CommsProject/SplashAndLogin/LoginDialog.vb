@@ -12,36 +12,61 @@
     Private Username As String = "Admin"
     Private Password As String = "1234"
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        testLogin()
+   
 
+    
 
-    End Sub
-
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Me.Close()
-    End Sub
 
     Private Sub testLogin()
         Dim userData As String() = DataClass.SearchUserByName(UsernameTextBox.ToString)
         ' Console.WriteLine("Username data: password:" & userData(2) & " role:" & userData(3))
 
-
+        lblErrorPrompt.Text = ""
         LoginCounter += 1
         If (UsernameTextBox.Text = Username AndAlso PasswordTextBox.Text = Password) Then
             Console.WriteLine("Sucessfully logged in...")
+            My.Settings.LoggedUser = UsernameTextBox.Text
             Dashboard.Show()
             Me.Close()
 
         Else
             PasswordTextBox.Clear()
+            My.Settings.LoggedUser = ""
+
+            lblErrorPrompt.Text = "Invalid user name or password..."
             PasswordTextBox.Focus()
             If LoginCounter = 3 Then
                 MessageBox.Show("You've attempted to login 3 times unsuccessfully" & _
                                 vbCrLf & "Application will now exit...")
                 Application.Exit()
+
             End If
         End If
+        My.Settings.Save()
+    End Sub
+
+   
+
+    Private Sub PasswordTextBox_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles PasswordTextBox.KeyDown
+        If e.KeyCode = Keys.Return Then
+            testLogin()
+        End If
+    End Sub
+
+    
+
+    Private Sub LoginDialog_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        lblErrorPrompt.Text = ""
+    End Sub
+
+    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        testLogin()
+    End Sub
+
+    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+        Me.Close()
+        My.Settings.LoggedUser = ""
+        My.Settings.Save()
     End Sub
 
     Private Sub UsernameTextBox_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles UsernameTextBox.KeyDown
@@ -52,12 +77,6 @@
             Else
                 testLogin()
             End If
-        End If
-    End Sub
-
-    Private Sub PasswordTextBox_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles PasswordTextBox.KeyDown
-        If e.KeyCode = Keys.Return Then
-            testLogin()
         End If
     End Sub
 End Class
